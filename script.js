@@ -1,5 +1,7 @@
 // 🌙 Toggle Dark Mode
-const darkModeToggle = document.getElementById("darkModeToggle");
+
+document.addEventListener("DOMContentLoaded", function () 
+{const darkModeToggle = document.getElementById("darkModeToggle");
 
 darkModeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
@@ -16,4 +18,7 @@ darkModeToggle.addEventListener("click", () => {
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
 }
+
+});
+
 
