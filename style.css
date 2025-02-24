@@ -1,148 +1,65 @@
 /* 🌿 General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F5F1E9; /* Soft beige background */
-    color: #333; /* Dark grey text */
-}
-
-/* 📌 Header */
-header {
-    text-align: center;
-    padding: 40px 0;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    font-style: italic;
-    color: #5A5A5A;
-}
-
-.quote {
-    font-family: "Georgia", serif;
-    font-size: 22px;
-    font-style: italic;
-    font-weight: bold;
-    color: #4A4A4A;
-    line-height: 1.5;
-    
-    position: fixed;
-    bottom: 200px;  /* Adjust vertical position */
-    right: 50px;   /* Adjust horizontal position */
-    
-    max-width: 40%;
-    text-align: justify;
-}
-
-
-
-
-
-
-
-/* 📌 Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #5A5A5A;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #8A705B; /* Elegant brown shade */
-}
-
-/* 📌 Sections */
-section {
-    padding: 60px 15%;
-}
-
-h2 {
-    font-size: 28px;
-    color: #5A5A5A;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* 🎨 Contact Form */
-form {
+    background: url('bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: auto;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 10vw;
+    position: relative;
 }
 
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
+/* 🔹 Background Overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: -1;
 }
 
-input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* 📌 Main Content Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 350px;
 }
 
-button {
-    padding: 10px;
-    background-color: #8A705B;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #705A48;
-}
-
-
-
+/* 📷 Profile Picture */
 .profile-photo {
-    display: block;
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #ccc;
-    position: absolute;
-    top: 120px;
-    right: 220px;  /* Moves photo to the right */
+    margin-bottom: 15px;
 }
 
+/* 🔗 Social Icons */
+/* 🔗 Social Icons */
 .social-icons {
     display: flex;
-    justify-content: flex-end;  /* Aligns icons to the right */
-    align-items: center;
-    gap: 15px;
-    position: absolute;
-    top: 300px;  /* Adjust position below the profile photo */
-    right: 150px;
+    gap: 18px;
+    margin-top:50px; /* Pushes icons down */
+    margin-bottom: 15px;
+    bottom: 50px;
 }
 
 .social-icons img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+    width: 50px;
+    height: 50px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -151,23 +68,21 @@ button:hover {
     opacity: 0.8;
 }
 
-body {
-    background: url('bg.jpeg') no-repeat center center fixed;
-    background-size: cover;
-}
+/* ⚡ Strong & Balanced Quote */
+.quote {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px; /* Big but not overwhelming */
+    font-weight: 400;
+    color: #1A1A1A; /* Deep black */
+    line-height: 1.2;
+    max-width: 90%;
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    text-transform: uppercase; /* All caps for impact */
 
-footer {
-    position: fixed;
-    bottom: 10px;   /* Keeps it at the bottom */
-    right: 50px;    /* Ensures it stays on the right */
-    font-family: "Consolas", "Times New Roman", serif;
-    font-size: 14px;
-    color: #555;
-    text-align: right;
-    width: auto;    /* Prevents unwanted stretching */
-    white-space: nowrap; /* Keeps it in a single line */
 }
-
 
 
 
